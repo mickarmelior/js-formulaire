@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="commande.js"></script>
+    <style>
+        .ref,
+        .prix,
+        .prixtotal,
+        #total {
+            border-style: solid;
+            border-width: 1px;
+        }
+        table {
+            width: 75%;
+            text-align: center;
+        }
+
+    </style>
+    <title> Formulaire de commande </title>
+</head>
+
+<body>
+    <h1>Prise de commande</h1>
+    <br>
+    <button id="ajouteligne">Ajout de ligne</button>
+    <hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Référence</th>
+                <th>Quantité</th>
+                <th>Prix unitaire</th>
+                <th>Prix</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="ligne">
+                <td>
+                    <select class="liste">
+                        <option value="entete">*Choisissez votre livre*</option>
+                        <!--<option value="hobbit">Le hobbit</option>
+                            <option value="martine">Martine à la plage</option>
+                            <option value="cuisine">La cuisine pour les nuls</option>
+                            <option value="poulpe">Le poulpe</option>-->
+                    </select>
+                </td>
+                <td>
+                    <p class="ref"></input>
+                </td>
+                <td>
+                    <input type="number" min="1" max="99" class="quant">
+                </td>
+                <td>
+                    <p class="prix">0</p>
+                </td>
+                <td>
+                    <p class="prixtotal">0</p>
+                </td>
+                <td>
+                    <button class="supprligne">-</button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <p style="text-align: right">Total</p>
+                </td>
+                <td>
+                    <p id="total">0</p>
+                </td>
+            </tr>
+        </tfoot>
+
+
+
+    </table>
+</body>
+
+</html>
